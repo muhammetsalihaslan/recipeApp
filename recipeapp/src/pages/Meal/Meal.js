@@ -1,11 +1,11 @@
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {Text, View} from 'react-native';
 
 const Meal = () => {
   return (
-    <SafeAreaView>
+    <View>
       <Text>Meal</Text>
-    </SafeAreaView>
+    </View>
   );
 };
 

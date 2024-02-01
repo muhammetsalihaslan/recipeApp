@@ -1,11 +1,11 @@
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {Text, View} from 'react-native';
 
 const Categories = () => {
   return (
-    <SafeAreaView>
+    <View>
       <Text>Categories</Text>
-    </SafeAreaView>
+    </View>
   );
 };
 
