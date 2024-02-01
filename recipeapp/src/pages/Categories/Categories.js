@@ -1,10 +1,12 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {FlatList, Text, View} from 'react-native';
 
 const Categories = () => {
+  const renderCategories = ({item}) => {};
+
   return (
     <View>
-      <Text>Categories</Text>
+      <FlatList data={data} renderItem={renderCategories} />
     </View>
   );
 };
