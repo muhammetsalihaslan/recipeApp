@@ -12,7 +12,7 @@ const Categories = () => {
 
   return (
     <View style={styles.container}>
-      <FlatList data={data} renderItem={renderCategories} />
+      <FlatList data={data.categories} renderItem={renderCategories} />
     </View>
   );
 };
