@@ -4,11 +4,16 @@ import useFetch from '../../hooks/useFetch';
 import Config from 'react-native-config';
 import styles from './Categories.style';
 import CategoriesCard from '../../components/CategoriesCard';
+import Error from '../../components/Error';
 
 const Categories = () => {
-  const data = useFetch(Config.API_URL);
+  const {data, error} = useFetch(Config.API_URL);
 
   const renderCategories = ({item}) => <CategoriesCard category={item} />;
+
+  if (error) {
+    return <Error />;
+  }
 
   return (
     <View style={styles.container}>
