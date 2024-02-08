@@ -1,13 +1,14 @@
 import React from 'react';
-import {Image, Text} from 'react-native';
+import {Image, Text, View} from 'react-native';
 import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
+import styles from './MealCard.style';
 
-const MealCard = () => {
+const MealCard = ({meal}) => {
   return (
     <TouchableWithoutFeedback>
-      <View>
-        <Image />
-        <Text>Merhaba</Text>
+      <View style={styles.container}>
+        <Image source={{uri: meal.strMealThumb}} style={styles.image} />
+        <Text style={styles.text}>{meal.strMeal}</Text>
       </View>
     </TouchableWithoutFeedback>
   );
