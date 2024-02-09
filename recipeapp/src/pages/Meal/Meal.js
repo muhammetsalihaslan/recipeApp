@@ -7,12 +7,19 @@ import Error from '../../components/Error';
 import Config from 'react-native-config';
 import styles from './Meal.style';
 
-const Meal = ({route}) => {
+const Meal = ({route, navigation}) => {
   const categories = route.params.category;
   const {data, loading, error} = useFetch(
     Config.API_URL_MEAL + `${categories}`,
   );
-  const renderMeal = ({item}) => <MealCard meal={item} />;
+
+  const handleSelectId = id => {
+    navigation.navigate('DetailPage', {id});
+  };
+
+  const renderMeal = ({item}) => (
+    <MealCard meal={item} onSelect={() => handleSelectId(item.id)} />
+  );
 
   if (loading) {
     return <Loading />;
