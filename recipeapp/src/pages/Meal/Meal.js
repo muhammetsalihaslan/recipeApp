@@ -18,7 +18,7 @@ const Meal = ({route, navigation}) => {
   };
 
   const renderMeal = ({item}) => (
-    <MealCard meal={item} onSelect={() => handleSelectId(item.id)} />
+    <MealCard meal={item} onSelect={() => handleSelectId(item.idMeal)} />
   );
 
   if (loading) {
