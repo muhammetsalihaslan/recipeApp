@@ -6,10 +6,11 @@ export default StyleSheet.create({
   container: {
     flexDirection: 'col',
     margin: 5,
+    flex: 1,
   },
   image: {
-    width: deviceSize.width,
-    height: 150,
+    minWidth: deviceSize.width / 7,
+    minHeight: 150,
     resizeMode: 'cover',
     borderRadius: 15,
     overflow: 'hidden',
@@ -17,11 +18,11 @@ export default StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontSize: 20,
+    fontSize: 25,
     fontWeight: 'bold',
-    lineHeight: 15,
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    width: deviceSize.width,
     textAlign: 'right',
+    borderBottomLeftRadius: 15,
+    borderBottomRightRadius: 15,
   },
 });

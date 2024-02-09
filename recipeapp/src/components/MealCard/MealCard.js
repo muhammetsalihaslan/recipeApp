@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Text, View} from 'react-native';
+import {Image, ImageBackground, Text, View} from 'react-native';
 import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
 import styles from './MealCard.style';
 
@@ -7,8 +7,11 @@ const MealCard = ({meal}) => {
   return (
     <TouchableWithoutFeedback>
       <View style={styles.container}>
-        <Image source={{uri: meal.strMealThumb}} style={styles.image} />
-        <Text style={styles.text}>{meal.strMeal}</Text>
+        <ImageBackground source={{uri: meal.strMealThumb}} style={styles.image}>
+          <Text ellipsizeMode="tail" numberOfLines={1} style={styles.text}>
+            {meal.strMeal}
+          </Text>
+        </ImageBackground>
       </View>
     </TouchableWithoutFeedback>
   );
