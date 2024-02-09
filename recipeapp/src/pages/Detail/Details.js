@@ -1,22 +1,26 @@
 import React from 'react';
-import {Image, Text, View} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+
 import useFetch from '../../hooks/useFetch';
+import {FlatList} from 'react-native';
+import Loading from '../../components/Loading';
+import Error from '../../components/Error';
+import DetailsCard from '../../components/DetailsCard';
 
 const Details = ({route}) => {
   const id = route.params.id;
   const {data, loading, error} = useFetch(Config.API_URL_DTL + `${id}`);
-  return (
-    <View>
-      <Image />
-      <Text></Text>
-      <Text></Text>
-      <Text></Text>
-      <TouchableOpacity>
-        <Text></Text>
-      </TouchableOpacity>
-    </View>
-  );
+
+  const renderDetails = ({item}) => <DetailsCard detail={item} />;
+
+  if (loading) {
+    return <Loading />;
+  }
+
+  if (error) {
+    return <Error />;
+  }
+
+  return <FlatList data={data.meals} renderItem={renderDetails} />;
 };
 
 export default Details;
