@@ -5,6 +5,7 @@ import {FlatList} from 'react-native';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
 import DetailsCard from '../../components/DetailsCard';
+import Config from 'react-native-config';
 
 const Details = ({route}) => {
   const id = route.params.id;
