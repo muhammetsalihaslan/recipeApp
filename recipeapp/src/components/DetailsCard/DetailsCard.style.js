@@ -33,4 +33,11 @@ export default StyleSheet.create({
     backgroundColor: 'black',
     marginTop: 5,
   },
+  touchable: {
+    backgroundColor: 'red',
+    height: 50,
+    borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });

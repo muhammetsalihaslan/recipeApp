@@ -12,8 +12,8 @@ const DetailsCard = ({detail}) => {
         <View style={styles.hr} />
         <Text style={styles.text3}>{detail.strInstructions}</Text>
       </View>
-      <TouchableOpacity>
-        <Text></Text>
+      <TouchableOpacity style={styles.touchable}>
+        <Text>Watch on Youtube</Text>
       </TouchableOpacity>
     </View>
   );
