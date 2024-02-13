@@ -39,5 +39,11 @@ export default StyleSheet.create({
     borderRadius: 5,
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 5,
+  },
+  text4: {
+    fontWeight: 'bold',
+    color: 'white',
+    fontSize: 20,
   },
 });
